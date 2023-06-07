@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(184, 243, 204);
+}
+h1{
+    color: rgb(196, 21, 21);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: red 1px 1px;
+    text-decoration: underline;
+}
+h3{
+    color: rgb(19, 19, 90);
+    font-size: 20px;
+}
+pre{
+    color: rgb(19, 19, 90);
+    font-size: 18px;
+    font-weight: bold;
+}
+p{
+    font-size: 20px;
+}
+.q7_ans{
+    color: black;
+    font-weight: normal;
+}
+span{
+    background-color: yellow;
+}
+hr{
+    height: 2px;
+    background-color: rgb(228, 154, 179);
+}

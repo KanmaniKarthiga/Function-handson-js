@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Handson 2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Functions Hands-on</h1>
+    <h3>Q1. Create one function with zero parameter having a console statement;</h3>
+    <pre class="q7_ans">
+        function first() {
+            console.log("Have a good day!")
+        }
+        first()</pre>
+    <p>A function named first is created without any parameter and inside this function console.log("Have a good
+        day!")statement is outputed</p>
+    <hr>
+
+    <h3>Q2.Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"
+    </h3>
+    <pre class="q7_ans">
+        var a;
+        var b;
+        function second(a,b){
+             console.log(`Sum of ${a},${b} is ${a+b}`)
+        }
+        second(3,4)
+    </pre>
+    <p>At first the two parameters are declared for memory allocation. Then a function named second is created with
+        parameters passed and the sum of two values is consoled using template string.The sum is done using arithmetic
+        operator(+)</p>
+    <hr>
+
+    <h3>Q3. Create one arrow function</h3>
+    <pre class="q7_ans">
+        const multiplier = (a,b) => {
+            console.log(a*b)
+        }
+        multiplier(2,2)
+    </pre>
+    <p>I created an arrow function with two parameters to multiply two values. </p>
+    <hr>
+
+    <pre>Q4. "Print output:" 
+        var x = 21 
+        var girl = function(){
+            console.log(x) 
+            var x = 20 
+        }
+        girl()</pre>
+    <p>The output is <span>Undefined</span></p>
+    <hr>
+
+    <pre>Q5."Print output:" 
+        var x = 21
+        girl()
+        console.log(x)
+        function girl(){
+            console.log(x)
+            var x = 20
+        }</pre>
+    <p>The output is <span>Undefined, 21</span></p>
+    <hr>
+
+    <pre>Q6. "Print output"
+        var x = 21
+        a()
+        b()
+          function a() {
+           x = 20;
+          console.log(x)
+        }
+         function b() {
+            
+            x = 40
+           console.log(x)
+        }</pre>
+    <p>The output is <span>20, 40.</span></p>
+    <hr>
+
+    <h3>Q7. Write a function that accepts parameter n and returns factorial of n</h3>
+    <pre class="q7_ans">
+        function factorial(n){
+            if(n<0)
+            {
+                console.log("Factorial for negative values do not exist")
+            }
+            else if(n===0)
+            {
+                console.log(`The factorial of ${n} is 1`)
+            }
+            else
+            {
+                let ans=0
+                for (let i=1; i<=n; i++)
+                {
+                    ans*=i
+                }
+                console.log(`The factorial of ${n} is ${ans}`)
+            }
+        }
+        factorial(5)
+    </pre>
+    <p>The output will be <span>The factorial of 5 is 120</span></p>
+    <hr>
+
+    <pre>Q8. "Guess the Output"
+        function FindSum(a, b){
+            return a + b;
+        }
+        function DisplayData(data, batch){
+            console.log(`i am from ${data} and My batch is EA${batch}`)
+        }
+        DisplayData("PrepBytes", FindSum(10, 9))</pre>
+    <p>The output is <span>i am from Prepbytes and My batch is EA19</span> </p>
+    <p>This is a callback function where the FindSum function is passed as a parameter in the DisplayData function</p>
+    <hr>
+
+    <pre>Q9. "Guess the output"
+        Abc()
+        const Abc = function(){
+            let value = 20
+            console.log(value)
+        }
+    </pre>
+    <p>The output brings up an <span>Error.</span></p>
+    <p>This is because the function is not initialized first with const. Only when the function is initialized, the
+        function call is possible. Else, reference error will occur. </p>
+    <hr>
+
+    <pre>Q10. "Guess the output"
+        var a = 10
+        (function (){
+            console.log(a)
+            var a = 20
+        })()</pre>
+    <p>The output brings up <span>Errors.</span></p>
+    <p>Here, there should be no brackets before function key and a function name is required.</p>
+    <pre class="q7_ans">If the function is written like,
+        var a = 10
+        function right(){
+            console.log(a)
+            var a = 20
+        }right()
+
+then, the output will be Undefined since console statement is done before initialization of var a. 
+But there will be no errors like in the actual question.
+    </pre>
+    <hr>
+
+    <pre>Q11. "Guess the Output"
+        const greet =  function(name){
+            return function(m){
+            
+                console.log(`Hi!! ${name}, ${m}`)
+            }
+        }  
+        const greet_message = greet('EA19')
+        greet_message("Welcome To PrepBytes")</pre>
+    <p>The output is <span>Hi!! EA19, Welcome To PrepBytes</span></p>
+    <p>Greet is storing the function with name as argument.And this greet function is returning a function with console
+        statement having a template string.Const greet_message is giving the 'name as EA19' of the greet function and the
+        greet_message is called with a string("Welcome to Prepbytes"), this is passed into the returning function(m).
+    </p>
+</body>
+</html>
