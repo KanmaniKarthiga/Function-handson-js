@@ -64,7 +64,7 @@ function factorial(n){
     }
     else
     {
-        let ans=0
+        let ans=1
         for (let i=1; i<=n; i++)
         {
             ans*=i
